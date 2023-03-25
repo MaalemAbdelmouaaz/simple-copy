@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutDialogContainer"
+    android:layout_margin="20dp"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:background="@drawable/dialog_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textTitle"
+            android:background="@drawable/sucsess"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@id/textTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textTitle"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Barcode"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textpripamry"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/product_name"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+             />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textpripamry"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/product_price"
+            app:layout_constraintTop_toBottomOf="@id/Barcode"
+              />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="18sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textpripamry"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonAddTocart"
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/buttonAddTocart"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_succes_background"
+        android:src="@drawable/add_shopping_cart"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonOk"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog"
+        />
+
+    <Button
+        android:id="@+id/buttonOk"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_succes_background"
+        android:text="ok"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonAddTocart"
+        app:layout_constraintTop_toBottomOf="@id/layoutDialog" />
+</androidx.constraintlayout.widget.ConstraintLayout>
